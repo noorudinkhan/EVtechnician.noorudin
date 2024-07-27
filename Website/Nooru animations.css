@@ -1,0 +1,91 @@
+/* General body styling */
+body {
+    background: url('data/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #006400; /* Dark Green text color */
+}
+
+/* Header styling */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay for contrast */
+    padding: 1rem 2rem;
+    position: relative;
+    width: 100%;
+    text-align: center; /* Center text and navigation */
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #00FF00; /* Bright Green */
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Glowing effect */
+}
+
+/* Navigation styling */
+nav {
+    margin: 1rem auto;
+    display: inline-block;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #00FF00; /* Bright Green */
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid #006400; /* Dark Green border */
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+}
+
+nav ul li a:hover {
+    color: #006400; /* Dark Green */
+    background-color: #00FF00; /* Bright Green */
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Heading colors */
+h1, h2 {
+    color: #00FF00; /* Bright Green */
+}
+
+/* Link styling */
+a {
+    color: #00FF00; /* Bright Green */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #006400; /* Dark Green */
+    text-decoration: underline;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

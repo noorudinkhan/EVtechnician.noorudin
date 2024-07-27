@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="Nooru animations.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #FFFFFF; /* White Color */
+            background: url('data/back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        header h1 {
+            font-family: 'Roboto Slab', serif;
+            color: #00FF00; /* Bright Green */
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+        }
+        main {
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        h1, h2 {
+            color: #00FF00; /* Bright Green */
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Glow effect */
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            }
+            to {
+                text-shadow: 0 0 25px rgba(0, 255, 0, 1);
+            }
+        }
+        p, a {
+            color: #FFFFFF; /* White Color */
+        }
+        a {
+            color: #00FF00; /* Bright Green */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .image-links img, .additional-info img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 1rem 0;
+        }
+        .additional-info {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction</h1>
+    </header>
+ <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro page 1.html">Introduction</a></li>
+                <li><a href="about page 2.html">About</a></li>
+                <li><a href="gallery page 3.html">Gallery</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    <main>
+        <section>
+            <h1>Introduction</h1>
+            <p>Hello,</p>
+            <p>My name is Noorudin Khan, and I am a resident of Durban, South Africa, where I grew up in Chatsworth. I have been assigned a task to <a href="data/original questionaire.docx">interview</a> local individuals regarding a green job of my choice. I have completed this task and compiled the information into a single webpage for your convenience.</p>
+            <p>Best regards,</p>
+            <p>Noorudin Khan</p>
+        </section>
+
+        <section>
+            <h2>My Data Report from Durban</h2>
+            <p>I have interviewed 25 people using the above <a href="data/original questionaire.docx">questionnaire</a>.</p>
+            <p>I have uploaded images showing the summary of information found in my <a href="data/my excel.xlsx">excel document</a>.</p>
+        </section>
+
+        <section class="additional-info">
+            <h2>Count of People Who Own an EV</h2>
+            <img src="data/capture.png" alt="Count of People Who Own an EV">
+
+            <h2>Why Did People Purchase Their EV?</h2>
+            <img src="data/capture2.png" alt="Why Did People Purchase Their EV?">
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Technician</title>
+    <link rel="stylesheet" href="Nooru animations.css">
+    <style>
+        /* Additional styles for this page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #4B3F2D; /* Coffee Color */
+            background: url('data/back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            overflow-y: auto; /* Allow vertical scrolling */
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .navigation {
+            width: auto; /* Allow width to fit content */
+            position: absolute;
+            top: 1rem;
+            left: 1rem; /* Position navigation to the top left */
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+            border: 2px solid #003300; /* Dark Green Border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 255, 0, 0.8); /* Slight shadow and glow */
+            z-index: 10;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .navigation a {
+            color: #F5F5DC; /* Light Beige Text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .navigation a:hover {
+            color: #F5F5DC; /* Light Beige Text on Hover */
+            background: #2C6B4F; /* Dark Green Background on Hover */
+            transform: scale(1.1);
+        }
+        .title {
+            position: absolute;
+            top: 2rem; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            font-family: 'Roboto Slab', serif; /* Better-designed font */
+            font-weight: bold;
+            color: #003300; /* Very Dark Green (Almost Black) */
+            text-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Bright Green Glow */
+            z-index: 10;
+            animation: glow 1.5s infinite alternate, titleFadeIn 2s ease-in-out;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+            }
+            to {
+                text-shadow: 0 0 25px rgba(0, 255, 0, 1);
+            }
+        }
+        @keyframes titleFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .image-links {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to fit images */
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            padding: 2rem 1rem; /* Adjust padding to fit content comfortably */
+            box-sizing: border-box;
+            gap: 1rem;
+            margin-top: 5rem; /* Add margin to ensure space below title */
+            animation: imageLinksFadeIn 2s ease-in-out;
+        }
+        @keyframes imageLinksFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .image-links a {
+            display: block;
+            max-width: 15%; /* Further reduced to make images smaller */
+            height: auto;
+            box-sizing: border-box;
+        }
+        .image-links img {
+            max-width: 100%; /* Resize images to fit the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0.2; /* 80% transparent */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .image-links img:hover {
+            transform: scale(1.05);
+            opacity: 0.95; /* 5% transparent on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Electric Vehicle Technician</div>
+    <div class="navigation">
+        <a href="intro page 1.html">Introduction</a>
+        <a href="about page 2.html">About</a>
+        <a href="gallery page 3.html">Gallery</a>
+        <a href="contact-us.html">Contact</a>
+    </div>
+    <div class="image-links">
+        <a href="intro page 1.html">
+            <img src="data/image1.jpg" alt="Home">
+        </a>
+        <a href="about page 2.html">
+            <img src="data/image2.jpg" alt="About the Green Job">
+        </a>
+        <a href="data/Original Questionaire.docx">
+            <img src="data/image4.jpg" alt="Original Questionnaire">
+        </a>
+        <a href="data/my excel.xlsx">
+            <img src="data/image5.jpg" alt="Electric Vehicles Worksheet">
+        </a>
+        <a href="data/report.docx">
+            <img src="data/image6.jpg" alt="Image 6">
+        </a>
+        <a href="data/database.accdb">
+            <img src="data/image7.jpg" alt="Image 7">
+        </a>
+    </div>
+</body>
+</html>
