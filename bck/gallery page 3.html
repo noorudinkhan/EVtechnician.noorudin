@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="Nooru animations.css">
+    <style>
+        /* Styles for the gallery page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #4B3F2D; /* Coffee Color */
+            background: url('data/back.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+            animation: fadeIn 2s ease-in-out;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        header h1 {
+            font-family: 'Roboto Slab', serif;
+            color: #00FF00; /* Bright Green */
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #F5F5DC; /* Light Beige Text */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #00FF00; /* Bright Green */
+        }
+        main {
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative; /* For absolute positioning of controls */
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .flipbook-container {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px; /* 3D effect for flipping */
+            overflow: hidden; /* Hide scrollbars */
+            margin: 0 auto; /* Center the container */
+        }
+        .flipbook {
+            width: 80%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        .flipbook .page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent; /* Remove background color */
+            box-shadow: none; /* Remove box shadow */
+            border: none; /* Remove border */
+        }
+        .flipbook .page img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Preserve aspect ratio */
+            border-radius: 8px;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .controls button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .controls button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="home page 0.html">Home</a></li>
+                <li><a href="intro page 1.html">Introduction</a></li>
+                <li><a href="about page 2.html">About</a></li>
+                <li><a href="gallery page 3.html">Gallery</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="flipbook-container">
+            <div class="flipbook" id="flipbook">
+                <!-- Page 1 -->
+                <div class="page">
+                    <img src="data/1.png" alt="Page 1">
+                </div>
+                <!-- Page 2 -->
+                <div class="page">
+                    <img src="data/2.png" alt="Page 2">
+                </div>
+                <!-- Page 3 -->
+                <div class="page">
+                    <img src="data/3.png" alt="Page 3">
+                </div>
+                <!-- Page 4 -->
+                <div class="page">
+                    <img src="data/4.png" alt="Page 4">
+                </div>
+                <!-- Page 5 -->
+                <div class="page">
+                    <img src="data/5.png" alt="Page 5">
+                </div>
+                <!-- Page 6 -->
+                <div class="page">
+                    <img src="data/6.png" alt="Page 6">
+                </div>
+                <!-- Page 7 -->
+                <div class="page">
+                    <img src="data/7.png" alt="Page 7">
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.flipbook .page');
+        const flipbook = document.getElementById('flipbook');
+        
+        function updateFlipbook() {
+            const angle = -currentPage * 180;
+            flipbook.style.transform = `rotateY(${angle}deg)`;
+            pages.forEach((page, index) => {
+                page.style.opacity = (index === currentPage) ? 1 : 0; // Fade in the current page
+            });
+        }
+        
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updateFlipbook();
+            }
+        });
+        
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                updateFlipbook();
+            }
+        });
+        
+        // Initialize the flipbook with the first page visible
+        updateFlipbook();
+    </script>
+</body>
+</html>
