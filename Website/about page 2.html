@@ -9,7 +9,7 @@
         /* Styles for the about page */
         body {
             font-family: 'Roboto', sans-serif;
-            color: #4B3F2D; /* Coffee Color */
+            color: #FFFFFF; /* White Color */
             background: url('data/back.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
@@ -35,6 +35,8 @@
             max-width: 800px;
             margin: 2rem auto;
             animation: fadeIn 2s ease-in-out;
+            overflow-y: auto;
+            max-height: calc(100vh - 4rem); /* Adjust this value to fit your header and padding */
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -58,6 +60,14 @@
             color: #006400; /* Dark Green */
             text-decoration: underline;
         }
+        .features-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -77,7 +87,71 @@
         <section class="job-description">
             <p>Electric vehicles (EVs) are becoming increasingly popular as a green alternative to traditional gasoline-powered cars. As an electric vehicle technician, your role will be to maintain and repair these vehicles, ensuring they run efficiently and sustainably.</p>
             <p>This career is part of the growing green jobs sector, which focuses on environmentally friendly technologies and practices.</p>
-            <p>For more information, <a href="https://www.example.com">click here</a>.</p>
+            <p>For more information, <a href="info.pdf">click here</a>.</p>
+        </section>
+
+        <section>
+            <h2>What does the job involve?</h2>
+            <p><strong>Electric Vehicle Technician Summary:</strong></p>
+            <p>An Electric Vehicle (EV) Technician works on maintaining and repairing electric cars. Their job involves diagnosing problems with electrical systems, battery packs, and the electric drivetrain. They also perform regular inspections, update software, and check that the charging systems are working properly. To do this job well, technicians need to keep up with the latest EV technology and safety practices to effectively address any issues that come up and ensure the vehicle is in top shape.</p>
+            <p>For more information refer to this document <a href="info.pdf">info.pdf</a>.</p>
+        </section>
+
+        <section>
+            <h2>Features of Electric Vehicles</h2>
+            <ul class="features-list">
+                <li>Zero tailpipe emissions</li>
+                <li>Quiet operation</li>
+                <li>Regenerative braking</li>
+                <li>Lower operating costs compared to gasoline vehicles</li>
+                <li>Reduced maintenance needs (fewer moving parts)</li>
+                <li>Fast acceleration</li>
+                <li>Instant torque delivery</li>
+                <li>Advanced infotainment and connectivity features</li>
+                <li>Over-the-air software updates</li>
+                <li>Charging options: home charging, public charging stations</li>
+                <li>Energy-efficient climate control systems</li>
+                <li>Potential for government incentives or rebates</li>
+                <li>Environmental benefits: reduced carbon footprint</li>
+                <li>Option for home solar panel integration</li>
+                <li>Variety of models and ranges to suit different needs</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Benefits of Being an Electric Vehicle Technician</h2>
+            <ul class="features-list">
+                <li>High Demand and Job Security: With the global push towards reducing carbon emissions, the electric vehicle market is growing rapidly. As a result, the need for skilled EV technicians is at an all-time high, offering strong job security and numerous employment opportunities.</li>
+                <li>Competitive Salaries: Due to the specialized skills required, EV technicians often enjoy competitive salaries. As the demand for their expertise continues to grow, there is also potential for salary growth and career advancement.</li>
+                <li>Contribution to Sustainability: Working as an EV technician allows individuals to contribute directly to environmental conservation. By maintaining and improving electric vehicles, technicians help reduce the reliance on fossil fuels and lower greenhouse gas emissions.</li>
+                <li>Technological Engagement: Electric vehicles incorporate cutting-edge technology, including advanced batteries, electric drivetrains, and sophisticated software systems. EV technicians get to work with these innovative technologies, staying at the forefront of automotive advancements.</li>
+                <li>Diverse Career Opportunities: The skills of an EV technician are versatile and applicable in various settings, from automotive repair shops to manufacturing plants and research facilities. This diversity offers multiple career pathways and opportunities for specialization.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pros and Cons</h2>
+            <p><strong>Pros:</strong></p>
+            <ul class="features-list">
+                <li>Growing Industry: The electric vehicle market is expanding, providing numerous job opportunities.</li>
+                <li>Sustainability: Contributing to a greener future and reducing environmental impact.</li>
+                <li>Technological Advancement: Engaging with state-of-the-art technologies and continual learning.</li>
+                <li>Competitive Salary: Potential for high earnings and job security.</li>
+                <li>Skill Versatility: Transferable skills applicable in various sectors of the automotive industry.</li>
+            </ul>
+            <p><strong>Cons:</strong></p>
+            <ul class="features-list">
+                <li>Specialized Training Required: Becoming an EV technician requires specific training and certification, which can be time-consuming and costly.</li>
+                <li>Constant Learning Curve: Rapid technological advancements necessitate continuous education and adaptation.</li>
+                <li>High Initial Investment: Tools and equipment specific to electric vehicles can be expensive.</li>
+                <li>Safety Risks: Working with high-voltage systems poses safety hazards if proper precautions are not taken.</li>
+                <li>Limited Availability in Some Regions: Job opportunities may be concentrated in regions with higher adoption of electric vehicles, potentially limiting prospects in other areas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>The role of an Electric Vehicle Technician is crucial in the ongoing shift towards sustainable transportation. The benefits of this green job include high demand, competitive salaries, and the opportunity to work with advanced technology while contributing to environmental conservation. However, the position requires specialized training and presents some challenges, such as safety risks and the need for continuous education. Overall, becoming an EV technician offers a rewarding career path with significant potential for growth and impact in the automotive industry.</p>
         </section>
     </main>
 </body>
